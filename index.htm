@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<!-- saved from url=(0020)http://shoorkaii.ir/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    
+    <title>Reza Ranjkesh Shoorkaii</title>
+    <meta content="width=device-width" name="viewport">
+    <meta content="#e0e0e0" name="theme-color">
+    <link href="http://shoorkaii.ir/favicon.png" rel="icon" sizes="192x192" type="image/png">
+    <script src="./Reza Ranjkesh Shoorkaii_files/jquery.js"></script>
+    <script>window.jQuery || document.write(unescape('%3Cscript src="shoorkaii_files/jquery.js">%3C/script>'))</script>
+    <link href="./Reza Ranjkesh Shoorkaii_files/css.css" rel="stylesheet">
+    <link href="./Reza Ranjkesh Shoorkaii_files/images.css" rel="stylesheet">
+    <style>* {
+        margin: 0;
+        padding: 0
+    }
+
+    li {
+        list-style: none
+    }
+
+    a {
+        color: #333;
+        text-decoration: none
+    }
+
+    a:focus {
+        outline: none
+    }
+
+    ::-moz-focus-inner {
+        border: 0
+    }
+
+    body {
+        color: #333;
+        background-color: #f8f8f8;
+        text-align: center;
+        font: 15px Cuprum, sans-serif;
+        text-shadow: 1px 1px 0 white;
+        -webkit-tap-highlight-color: rgba(255, 255, 255, 0)
+    }
+
+    .person {
+        padding: 10px
+    }
+
+    .meta {
+        display: none
+    }
+
+    .images {
+        width: 220px;
+        height: 220px;
+        position: relative;
+        margin: 50px auto 60px auto
+    }
+
+    .mask, .photo {
+        cursor: pointer
+    }
+
+    .mask {
+        position: absolute;
+        top: 0;
+        left: -8px;
+        width: 236px;
+        height: 236px;
+        background-size: 100% 100%;
+        border-radius: 50%
+    }
+
+    .photo {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background-size: 100% 100%;
+        box-shadow: 1px 1px 0 white
+    }
+
+    .transform-2d .mask, .transform-2d .photo {
+        -webkit-transition: opacity 800ms, -webkit-transform 800ms;
+        transition: opacity 800ms, -webkit-transform 800ms;
+        transition: opacity 800ms, transform 800ms;
+        transition: opacity 800ms, transform 800ms, -webkit-transform 800ms
+    }
+
+    .transform-2d .mask {
+        z-index: 2
+    }
+
+    .transform-2d .photo {
+        display: block
+    }
+
+    .transform-2d .photo, .transform-2d .is-real .mask {
+        -webkit-transform: scale(0.7);
+        transform: scale(0.7);
+        opacity: 0
+    }
+
+    .transform-2d .is-real .photo, .transform-2d .mask {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1
+    }
+
+    .transform-3d .images {
+        -webkit-perspective: 400px;
+        perspective: 400px
+    }
+
+    .transform-3d .mask, .transform-3d .photo {
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -webkit-transition: -webkit-transform 1.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        transition: -webkit-transform 1.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        transition: transform 1.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        transition: transform 1.4s cubic-bezier(0.165, 0.84, 0.44, 1), -webkit-transform 1.4s cubic-bezier(0.165, 0.84, 0.44, 1)
+    }
+
+    .transform-3d .photo {
+        display: block;
+        -webkit-transform: rotateY(-180deg);
+        transform: rotateY(-180deg)
+    }
+
+    .list .is-tapped, .list :active, .languages .is-tapped, .languages :active {
+        -webkit-transition: none !important;
+        transition: none !important
+    }
+
+    .list body, .languages body {
+        -webkit-tap-highlight-color: rgba(255, 255, 255, 0)
+    }
+
+    .name {
+        font-weight: normal;
+        font-size: 48px;
+        padding-bottom: 20px
+    }
+
+    .list {
+        padding-top: 30px;
+        font-size: 18px;
+        position: relative
+    }
+
+    .piece {
+        display: inline-block;
+        margin-left: 50px;
+        text-align: left;
+        vertical-align: top;
+        width: 250px;
+        box-sizing: border-box
+    }
+
+    .piece:first-child {
+        margin-left: 0
+    }
+
+    .link {
+        display: inline-block;
+        padding: 10px 14px 8px 14px;
+        -webkit-transition: background 200ms;
+        transition: background 200ms;
+        position: relative;
+        border-radius: 3px
+    }
+
+    .link .icon {
+        position: absolute;
+        left: 10px;
+        -webkit-transition: opacity 200ms;
+        transition: opacity 200ms
+    }
+
+    .link, .link.was-tapped:hover, .link.was-tapped:active {
+        background: transparent;
+        -webkit-transform: none;
+        transform: none
+    }
+
+    .link .icon, .link.was-tapped:hover .icon, .link.was-tapped:active .icon {
+        opacity: 0.75
+    }
+
+    .link:hover {
+        background: rgba(0, 0, 0, 0.04)
+    }
+
+    .link:hover .icon, .link.is-tapped .icon {
+        opacity: 1
+    }
+
+    .link:active {
+        -webkit-transform: translateY(2px);
+        transform: translateY(2px)
+    }
+
+    .link.is-tapped {
+        -webkit-transform: scale(0.9);
+        transform: scale(0.9);
+        background: rgba(0, 0, 0, 0.04)
+    }
+
+    .contacts .icon {
+        margin-top: 25px
+    }
+
+    .contacts .value {
+        padding-top: 3px;
+        font-size: 24px
+    }
+
+    .contacts .label, .contacts .value {
+        -webkit-transition: color 200ms;
+        transition: color 200ms
+    }
+
+    .contacts .phone .value {
+        margin-left: -9px
+    }
+
+    .contacts .link .label, .contacts .link.was-tapped:hover .label, .contacts .link.was-tapped:active .label {
+        color: #666
+    }
+
+    .contacts .link .value, .contacts .link.was-tapped:hover .value, .contacts .link.was-tapped:active .value {
+        color: #333
+    }
+
+    .contacts .link.is-tapped .label, .contacts .link.is-tapped .value {
+        -webkit-transition: none;
+        transition: none
+    }
+
+    .contacts .link:hover .label, .contacts .link.is-tapped .label {
+        color: #333
+    }
+
+    .contacts .link:hover .value, .contacts .link.is-tapped .value {
+        color: black
+    }
+
+    .links .service {
+        font-size: 24px
+    }
+
+    .links .dash {
+        color: #bbb;
+        padding: 0 4px
+    }
+
+    .links .service, .links .dash, .links .login {
+        -webkit-transition: color 200ms;
+        transition: color 200ms
+    }
+
+    .links .link .service, .links .link.was-tapped:hover .service, .links .link.was-tapped:active .service {
+        color: #333
+    }
+
+    .links .link .dash, .links .link.was-tapped:hover .dash, .links .link.was-tapped:active .dash {
+        color: #bbb
+    }
+
+    .links .link .login, .links .link.was-tapped:hover .login, .links .link.was-tapped:active .login {
+        color: #666
+    }
+
+    .links .link.is-tapped .service, .links .link.is-tapped .dash, .links .link.is-tapped .login {
+        -webkit-transition: none;
+        transition: none
+    }
+
+    .links .link:hover .service, .links .link.is-tapped .service {
+        color: black
+    }
+
+    .links .link:hover .dash, .links .link.is-tapped .dash {
+        color: #888
+    }
+
+    .links .link:hover .login, .links .link.is-tapped .login {
+        color: #333
+    }
+
+    .email {
+        padding-left: 5px
+    }
+
+    .email .link {
+        padding-left: 46px
+    }
+
+    .email .icon {
+        top: 14px;
+        width: 22px;
+        height: 18px;
+        background-size: 100% 100%
+    }
+
+    .location {
+        padding-left: 11px
+    }
+
+    .location .link {
+        padding-left: 40px
+    }
+
+    .location .icon {
+        top: 11px;
+        width: 16px;
+        height: 24px;
+        background-size: 100% 100%
+    }
+
+    .phone {
+        padding-left: 5px
+    }
+
+    .phone .link {
+        padding-left: 46px
+    }
+
+    .phone .icon {
+        top: 11px;
+        width: 22px;
+        height: 23px;
+        background-size: 100% 100%
+    }
+
+    .github {
+        padding-left: 5px
+    }
+
+    .github .link {
+        padding-left: 46px
+    }
+
+    .github .icon {
+        top: 11px;
+        width: 22px;
+        height: 24px;
+        background-size: 100% 100%
+    }
+
+    .twitter {
+        padding-left: 0px
+    }
+
+    .twitter .link {
+        padding-left: 51px
+    }
+
+    .twitter .icon {
+        top: 12px;
+        width: 27px;
+        height: 22px;
+        background-size: 100% 100%
+    }
+
+    .vk {
+        padding-left: 5px
+    }
+
+    .vk .link {
+        padding-left: 46px
+    }
+
+    .vk .icon {
+        top: 12px;
+        width: 22px;
+        height: 22px;
+        background-size: 100% 100%
+    }
+
+    .facebook {
+        padding-left: 5px
+    }
+
+    .facebook .link {
+        padding-left: 46px
+    }
+
+    .facebook .icon {
+        top: 12px;
+        width: 22px;
+        height: 22px;
+        background-size: 100% 100%
+    }
+
+    html {
+        position: relative;
+    }
+
+    body {
+        margin-bottom: 85px
+    }
+
+    .languages {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 85px;
+        width: 100%
+    }
+
+    .languages {
+        padding-top: 46px;
+        height: 39px
+    }
+
+    .lang {
+        display: inline-block;
+        margin: 0 0 8px 4px;
+        padding: 7px 8px;
+        -webkit-transition: background 200ms, color 200ms;
+        transition: background 200ms, color 200ms;
+        position: relative
+    }
+
+    .lang .text {
+        display: inline-block;
+        -webkit-transition: border 200ms;
+        transition: border 200ms;
+        line-height: 1
+    }
+
+    .lang:first-child .loader {
+        left: auto;
+        right: 100%
+    }
+
+    .lang.is-current {
+        pointer-events: none
+    }
+
+    .lang.is-loading {
+        -webkit-animation: blinking 800ms infinite;
+        animation: blinking 800ms infinite
+    }
+
+    .lang:first-child {
+        margin-left: 0
+    }
+
+    .lang, .lang.was-tapped:hover, .lang.was-tapped:active {
+        color: #666;
+        -webkit-transform: none;
+        transform: none;
+        background: transparent
+    }
+
+    .lang .text, .lang.was-tapped:hover .text, .lang.was-tapped:active .text {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2)
+    }
+
+    .lang.is-current, .lang.is-current:hover, .lang.is-current.is-tapped {
+        color: #333;
+        -webkit-transform: none;
+        transform: none;
+        background: transparent
+    }
+
+    .lang.is-current .text, .lang.is-current:hover .text, .lang.is-current.is-tapped .text {
+        border-bottom: none
+    }
+
+    .lang:hover {
+        color: #333;
+        background: rgba(0, 0, 0, 0.04)
+    }
+
+    .lang:hover .text {
+        border-bottom-color: #333
+    }
+
+    .lang:active {
+        -webkit-transform: translateY(2px);
+        transform: translateY(2px)
+    }
+
+    .lang.is-tapped {
+        -webkit-transform: scale(0.9);
+        transform: scale(0.9);
+        background: rgba(0, 0, 0, 0.04);
+        color: black
+    }
+
+    @-webkit-keyframes blinking {
+        0% {
+            opacity: 1
+        }
+        50% {
+            opacity: 0.3
+        }
+        100% {
+            opacity: 1
+        }
+    }
+
+    @keyframes blinking {
+        0% {
+            opacity: 1
+        }
+        50% {
+            opacity: 0.3
+        }
+        100% {
+            opacity: 1
+        }
+    }
+
+    @media all and (max-width: 886px) {
+        .piece {
+            margin-left: 10px
+        }
+
+        .piece:first-child {
+            margin-left: 0
+        }
+    }
+
+    @media all and (max-width: 790px) {
+        .list {
+            display: inline-block;
+            vertical-align: top
+        }
+
+        .links {
+            margin-top: 25px;
+            margin-left: 20px
+        }
+
+        .piece {
+            display: block;
+            margin: 0 auto
+        }
+
+        .piece, .piece:first-child {
+            margin: 0 auto
+        }
+    }
+
+    @media all and (max-width: 540px) {
+        .list {
+            display: block
+        }
+
+        .links {
+            margin-left: 0
+        }
+
+        .piece, .piece:first-child {
+            margin: 0 auto
+        }
+    }
+
+    @media all and (max-height: 715px) {
+        .images {
+            margin-top: 10px;
+            margin-bottom: 40px
+        }
+
+        .name {
+            padding-bottom: 10px
+        }
+
+        .list {
+            padding-top: 20px
+        }
+
+        html {
+            position: relative;
+        }
+
+        body {
+            margin-bottom: 75px
+        }
+
+        .languages {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 75px;
+            width: 100%
+        }
+
+        .languages {
+            padding-top: 37px;
+            height: 38px
+        }
+    }
+
+    @media all and (max-width: 540px) and (max-height: 715px) {
+        .links {
+            margin-top: 15px
+        }
+    }
+
+    .content-position {
+        position: relative
+    }
+
+    .content.is-next {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0
+    }
+
+    .transform-2d .content.is-animated .name, .transform-2d .content.is-animated .contacts .label, .transform-2d .content.is-animated .contacts .icon, .transform-2d .content.is-animated .contacts .value, .transform-2d .content.is-animated .links .link {
+        -webkit-transition: opacity 600ms;
+        transition: opacity 600ms
+    }
+
+    .transform-2d .content.is-hidden .name, .transform-2d .content.is-hidden .contacts .label, .transform-2d .content.is-hidden .contacts .icon, .transform-2d .content.is-hidden .contacts .value, .transform-2d .content.is-hidden .links .link {
+        opacity: 0
+    }
+
+    .transform-3d .content.is-animated .name, .transform-3d .content.is-animated .contacts .label, .transform-3d .content.is-animated .contacts .icon, .transform-3d .content.is-animated .contacts .value, .transform-3d .content.is-animated .links .link {
+        -webkit-transition: -webkit-transform 600ms;
+        transition: -webkit-transform 600ms;
+        transition: transform 600ms;
+        transition: transform 600ms, -webkit-transform 600ms;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden
+    }
+
+    .transform-3d .content.is-hidden .name, .transform-3d .content.is-hidden .contacts .label, .transform-3d .content.is-hidden .contacts .icon, .transform-3d .content.is-hidden .contacts .value, .transform-3d .content.is-hidden .links .link {
+        -webkit-transform: rotateX(180deg);
+        transform: rotateX(180deg)
+    }
+    </style>
+
+</head>
+<body class="transform-3d">
+<div class="person" itemscope="" itemtype="http://schema.org/Person">
+    <div class="images is-animated with-right-rotation">
+        <div style="transform: rotateY(180deg);" class="mask"></div>
+        <img style="transform: rotateY(0deg);" alt="Reza Ranjkesh Shoorkaii photo" class="photo" itemprop="image" src="./Reza Ranjkesh Shoorkaii_files/reza.jpg"></div>
+    <div class="content-position">
+        <div class="content"><h1 class="name"><span itemprop="givenName">Reza</span> <span itemprop="familyName">Ranjkesh Shoorkaii</span>
+        </h1>
+            <ul class="contacts list">
+                <li class="piece email"><a class="link" href="mailto:shoorkaii@gmail.com">
+                    <div class="icon"></div>
+                    <div class="label">E-mail</div>
+                    <div class="value" itemprop="email">shoorkaii@gmail.com</div>
+                </a></li>
+                <li class="piece location"><a class="link" href="https://www.google.com/maps?q=Sharif+University+of+Technology">
+                    <div class="icon"></div>
+                    <div class="label">Location</div>
+                    <div class="value" itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress"><span itemprop="addressLocality">Sharif University of Technology</span></div>
+                </a></li>
+                <li class="piece phone"><a class="link" href="tel:+989120802869">
+                    <div class="icon"></div>
+                    <div class="label">Phone</div>
+                    <div class="value" itemprop="telephone">+98 912 08 028 69</div>
+                </a></li>
+            </ul>
+            <ul class="links list">
+                <li class="piece github"><a class="link" href="http://codelopers.com/" rel="me">
+                    <div class="icon"></div>
+                    <span class="service">GitHub</span><span class="dash">/</span></a></li>
+                <li class="piece twitter"><a class="link" href="https://twitter.com/Reza_Ranjkesh" rel="me">
+                    <div class="icon"></div>
+                    <span class="service">Twitter</span><span class="dash">/</span><span class="login">reza_ranjkesh</span></a></li>
+                <li class="piece facebook"><a class="link" href="http://instagram.com/reza_ranjkesh" rel="me">
+                    <div class="icon"></div>
+                    <span class="service">Instagram</span><span class="dash">/</span><span class="login">reza_ranjkesh</span></a></li>
+            </ul>
+            <div class="meta">
+                <meta content="http://shoorkaii.ir/" itemprop="url">
+                <meta content="1991-19-12" itemprop="birthDate">
+                <a href="http://shoorkaii.ir/" rel="me"></a><a href="https://shoorkaii.ir/" rel="me"></a><a href="http://shoorkaii.ir/" rel="me"></a><a href="https://shoorkaii.ir/" rel="me"></a></div>
+        </div>
+    </div>
+    <div class="languages"><a class="lang" href="http://www.mahak-charity.org/" rel="alternate"><span class="text">Mahak Charity</span>
+        <div class="loader"></div>
+    </a>
+    </div>
+</div>
+<script>window.after = function (t, n) {
+    return setTimeout(n, t)
+}, window.evil || (window.evil = {}), evil.win = $(window), evil.doc = $(document), evil.body = null, evil.doc.ready(function () {
+    evil.body = $("body")
+}), function (t) {
+    evil.jquery = function (n, e) {
+        n.$ = function (t) {
+            this.nodes = t
+        }, n.$.extend = function (e, i) {
+            if (t.isPlainObject(e))for (key in e)n.$.extend(key, e[key]); else {
+                if (t.isFunction(i)) {
+                    var o = i;
+                    i = function () {
+                        return o.apply(this.nodes, arguments)
+                    }
+                }
+                this.prototype[e] = i
+            }
+        };
+        var i = t.fn.init;
+        t.fn.init = function () {
+            return nodes = i.apply(this, arguments), nodes[e] = new n.$(nodes), nodes
+        }, t.fn.init.prototype = i.prototype
+    }, evil.jquery(evil, "evil")
+}(jQuery), function () {
+    var t = function () {
+        this.classList.add("is-tapped")
+    }, n = function () {
+        var t = $(this);
+        setTimeout(function () {
+            t.removeClass("is-tapped").addClass("was-tapped").one("mouseenter", function () {
+                t.removeClass("was-tapped")
+            })
+        }, 100)
+    };
+    evil.$.extend({
+        tappable: function (e) {
+            return e ? (this.on("touchstart", e, t), this.on("touchend touchmove", e, n)) : (this.on("touchstart", t), this.on("touchend touchmove", n)), this
+        }
+    }), evil.doc.ready(function () {
+        evil.body.evil.tappable("a, input, label")
+    })
+}(), function () {
+    var t = !1;
+    evil.transform3d = {
+        check: function () {
+            if ("undefined" != typeof t)return t;
+            var t = "undefined" != typeof evil.body.css("perspective"), n = document.body;
+            return t && "undefined" != typeof n.webkitPerspective && (t = matchMedia("(transform-3d), (-webkit-transform-3d)"), t = t.matches), t
+        }, init: function () {
+            t || (t = !0, evil.doc.ready(function () {
+                var t = evil.transform3d.check() ? "3d" : "2d";
+                evil.body.addClass("transform-" + t)
+            }))
+        }
+    }
+}(), evil.transform3d.init(), function () {
+    evil.queue = function (i, o) {
+        "function" == typeof i && (o = i, i = "default"), "undefined" == typeof n[i] && (t[i] = !1, n[i] = []), t[i] ? n[i].push(o) : e(i, o)
+    };
+    var t = {}, n = {}, e = function (i, o) {
+        t[i] = !0, o(function () {
+            t[i] = !1;
+            var o = n[i].pop();
+            o && e(i, o)
+        })
+    }
+}(), function () {
+    $(function () {
+        var t, n, e, i, o, r, s, a, u, d;
+        if (t = -180, i = $(".images"), s = $(".photo"), r = $(".mask"), a = evil.body.hasClass("transform-3d") ? function (n) {
+                    return t += "left" === n ? -180 : 180, s.css({transform: "rotateY(" + t + "deg)"}), r.css({transform: "rotateY(" + (t + 180) + "deg)"})
+                } : function () {
+                    return i.toggleClass("is-real")
+                }, o = !1, $(window).load(function () {
+                    return after(3e3, function () {
+                        if (!o)return a("right")
+                    })
+                }), e = i.width() / 2, i.on("click touchdown", function (t) {
+                    var n;
+                    return o = !0, n = t.offsetX > e, a(n ? "right" : "left"), !1
+                }), window.history && history.pushState)return d = {}, u = function (t, n) {
+            return d[t] ? n(d[t]) : $.ajax({
+                url: "/" + t + ".content", dataType: "text", fail: function () {
+                    var n;
+                    return n = "ru" === t ? "/" : "/" + t
+                }, success: function (e) {
+                    return d[t] = e, n(d[t])
+                }
+            })
+        }, n = $("html").attr("lang"), d[n] = $(".content").html(), $(".lang").click(function () {
+            var t, e;
+            return e = $(this), t = e.attr("hreflang"), evil.queue(function (i) {
+                return n === t ? i() : (e.addClass("is-loading"), u(t, function (o) {
+                    var r, s;
+                    return $(".lang").removeClass("is-current"), e.addClass("is-current").removeClass("is-loading"), s = $(".content").addClass("is-animated"), r = $('<div class="content is-next is-hidden is-animated" />').html(o).insertAfter(s), document.title = r.find(".name").text(), after(1, function () {
+                        return s.addClass("is-hidden"), r.removeClass("is-hidden")
+                    }), after(601, function () {
+                        return r.removeClass("is-next is-animated"), s.remove(), n = t, i()
+                    }), history.pushState({}, "", e.attr("href"))
+                }))
+            }), !1
+        })
+    })
+}.call(this);</script>
+
+<script id="wappalyzer" src="chrome-extension://gppongmhjkpfnbhagpmjfkannfbllamg/js/inject.js"></script></body></html>
