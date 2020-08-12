@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <!-- saved from url=(0020)http://shoorkaii.ir/ -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
-    
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
     <title>Reza Ranjkesh Shoorkaii</title>
     <meta content="width=device-width" name="viewport">
     <meta content="#e0e0e0" name="theme-color">
@@ -643,9 +645,9 @@
 </head>
 <body class="transform-3d">
 <div class="person" itemscope="" itemtype="http://schema.org/Person">
-    <div class="images is-animated with-right-rotation">
-        <div style="transform: rotateY(180deg);" class="mask"></div>
-        <img style="transform: rotateY(0deg);" alt="Reza Ranjkesh Shoorkaii photo" class="photo" itemprop="image" src="./static/shoorkaii.jpg"></div>
+    <div class="images">
+        <img style="transform: rotateY(0deg);" alt="Reza Ranjkesh Shoorkaii photo" class="photo" itemprop="image"
+             src="./static/shoorkaii.jpg"></div>
     <div class="content-position">
         <div class="content"><h1 class="name"><span itemprop="givenName">Reza</span> <span itemprop="familyName">Ranjkesh Shoorkaii</span>
         </h1>
@@ -654,36 +656,48 @@
                     <div class="icon"></div>
                     <div class="label">E-mail</div>
                     <div class="value" itemprop="email">shoorkaii@gmail.com</div>
-                </a></li>
-                <li class="piece location"><a class="link" href="https://www.google.com/maps?q=Sharif+University+of+Technology">
+                </a>
+                </li>
+                <li class="piece location"><a class="link"
+                                              href="https://www.google.com/maps?q=Sharif+University+of+Technology">
                     <div class="icon"></div>
                     <div class="label">Location</div>
-                    <div class="value" itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress"><span itemprop="addressLocality">Tehran, Iran</span></div>
-                </a></li>
+                    <div class="value" itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress"><span
+                            itemprop="addressLocality">Tehran, Iran</span></div>
+                </a>
+                </li>
                 <li class="piece phone"><a class="link" href="tel:+989120802869">
                     <div class="icon"></div>
                     <div class="label">Phone</div>
                     <div class="value" itemprop="telephone">+989120802869</div>
-                </a></li>
+                </a>
+                </li>
             </ul>
             <ul class="links list">
-                <li class="piece github"><a class="link" href="https://www.linkedin.com/in/rezaranjkeshshoorkaii/" rel="me">
+                <li class="piece github"><a class="link" href="https://www.linkedin.com/in/rezaranjkeshshoorkaii/"
+                                            rel="me">
                     <div class="icon"></div>
-                    <span class="service">LinkedIn</span><span class="dash">/</span></a>
+                    <span class="service">LinkedIn</span><span class="dash">/</span>
+                    <span class="login">rezaranjkeshshoorkaii</span>
+                </a>
+
                 </li>
-                <li class="piece twitter"><a class="link" href="https://twitter.com/Reza_Ranjkesh" rel="me">
+                <li class="piece twitter"><a class="link" href="https://twitter.com/reza_ranjkesh" rel="me">
                     <div class="icon"></div>
-                    <span class="service">Twitter</span><span class="dash">/</span><span class="login">reza_ranjkesh</span></a>
+                    <span class="service">Twitter</span><span class="dash">/</span><span
+                        class="login">reza_ranjkesh</span></a>
                 </li>
                 <li class="piece facebook"><a class="link" href="http://instagram.com/reza_ranjkesh" rel="me">
                     <div class="icon"></div>
-                    <span class="service">Instagram</span><span class="dash">/</span><span class="login">reza_ranjkesh</span></a>
+                    <span class="service">Instagram</span><span class="dash">/</span><span
+                        class="login">reza_ranjkesh</span></a>
                 </li>
             </ul>
             <div class="meta">
                 <meta content="http://shoorkaii.ir/" itemprop="url">
                 <meta content="1991-19-12" itemprop="birthDate">
-                <a href="http://shoorkaii.ir/" rel="me"></a><a href="https://shoorkaii.ir/" rel="me"></a><a href="http://shoorkaii.ir/" rel="me"></a><a href="https://shoorkaii.ir/" rel="me"></a></div>
+                <a href="http://shoorkaii.ir/" rel="me"></a><a href="https://shoorkaii.ir/" rel="me"></a><a
+                    href="http://shoorkaii.ir/" rel="me"></a><a href="https://shoorkaii.ir/" rel="me"></a></div>
         </div>
     </div>
     <div class="languages"><a class="lang" href="http://www.mahak-charity.org/" rel="alternate"><span class="text">Mahak Charity</span>
@@ -692,109 +706,111 @@
     </div>
 </div>
 <script>window.after = function (t, n) {
-    return setTimeout(n, t)
+  return setTimeout(n, t)
 }, window.evil || (window.evil = {}), evil.win = $(window), evil.doc = $(document), evil.body = null, evil.doc.ready(function () {
-    evil.body = $("body")
+  evil.body = $("body")
 }), function (t) {
-    evil.jquery = function (n, e) {
-        n.$ = function (t) {
-            this.nodes = t
-        }, n.$.extend = function (e, i) {
-            if (t.isPlainObject(e))for (key in e)n.$.extend(key, e[key]); else {
-                if (t.isFunction(i)) {
-                    var o = i;
-                    i = function () {
-                        return o.apply(this.nodes, arguments)
-                    }
-                }
-                this.prototype[e] = i
-            }
-        };
-        var i = t.fn.init;
-        t.fn.init = function () {
-            return nodes = i.apply(this, arguments), nodes[e] = new n.$(nodes), nodes
-        }, t.fn.init.prototype = i.prototype
-    }, evil.jquery(evil, "evil")
+  evil.jquery = function (n, e) {
+    n.$ = function (t) {
+      this.nodes = t
+    }, n.$.extend = function (e, i) {
+      if (t.isPlainObject(e)) for (key in e) n.$.extend(key, e[key]) else {
+        if (t.isFunction(i)) {
+          var o = i
+          i = function () {
+            return o.apply(this.nodes, arguments)
+          }
+        }
+        this.prototype[e] = i
+      }
+    }
+    var i = t.fn.init
+    t.fn.init = function () {
+      return nodes = i.apply(this, arguments), nodes[e] = new n.$(nodes), nodes
+    }, t.fn.init.prototype = i.prototype
+  }, evil.jquery(evil, "evil")
 }(jQuery), function () {
-    var t = function () {
-        this.classList.add("is-tapped")
-    }, n = function () {
-        var t = $(this);
-        setTimeout(function () {
-            t.removeClass("is-tapped").addClass("was-tapped").one("mouseenter", function () {
-                t.removeClass("was-tapped")
-            })
-        }, 100)
-    };
-    evil.$.extend({
-        tappable: function (e) {
-            return e ? (this.on("touchstart", e, t), this.on("touchend touchmove", e, n)) : (this.on("touchstart", t), this.on("touchend touchmove", n)), this
-        }
-    }), evil.doc.ready(function () {
-        evil.body.evil.tappable("a, input, label")
-    })
-}(), function () {
-    var t = !1;
-    evil.transform3d = {
-        check: function () {
-            if ("undefined" != typeof t)return t;
-            var t = "undefined" != typeof evil.body.css("perspective"), n = document.body;
-            return t && "undefined" != typeof n.webkitPerspective && (t = matchMedia("(transform-3d), (-webkit-transform-3d)"), t = t.matches), t
-        }, init: function () {
-            t || (t = !0, evil.doc.ready(function () {
-                var t = evil.transform3d.check() ? "3d" : "2d";
-                evil.body.addClass("transform-" + t)
-            }))
-        }
+  var t = function () {
+    this.classList.add("is-tapped")
+  }, n = function () {
+    var t = $(this)
+    setTimeout(function () {
+      t.removeClass("is-tapped").addClass("was-tapped").one("mouseenter", function () {
+        t.removeClass("was-tapped")
+      })
+    }, 100)
+  }
+  evil.$.extend({
+    tappable: function (e) {
+      return e ? (this.on("touchstart", e, t), this.on("touchend touchmove", e, n)) : (this.on("touchstart", t), this.on("touchend touchmove", n)), this
     }
+  }), evil.doc.ready(function () {
+    evil.body.evil.tappable("a, input, label")
+  })
+}(), function () {
+  var t = !1
+  evil.transform3d = {
+    check: function () {
+      if ("undefined" != typeof t) return t
+      var t = "undefined" != typeof evil.body.css("perspective"), n = document.body
+      return t && "undefined" != typeof n.webkitPerspective && (t = matchMedia("(transform-3d), (-webkit-transform-3d)"), t = t.matches), t
+    }, init: function () {
+      t || (t = !0, evil.doc.ready(function () {
+        var t = evil.transform3d.check() ? "3d" : "2d"
+        evil.body.addClass("transform-" + t)
+      }))
+    }
+  }
 }(), evil.transform3d.init(), function () {
-    evil.queue = function (i, o) {
-        "function" == typeof i && (o = i, i = "default"), "undefined" == typeof n[i] && (t[i] = !1, n[i] = []), t[i] ? n[i].push(o) : e(i, o)
-    };
-    var t = {}, n = {}, e = function (i, o) {
-        t[i] = !0, o(function () {
-            t[i] = !1;
-            var o = n[i].pop();
-            o && e(i, o)
-        })
-    }
-}(), function () {
-    $(function () {
-        var t, n, e, i, o, r, s, a, u, d;
-        if (t = -180, i = $(".images"), s = $(".photo"), r = $(".mask"), a = evil.body.hasClass("transform-3d") ? function (n) {
-                    return t += "left" === n ? -180 : 180, s.css({transform: "rotateY(" + t + "deg)"}), r.css({transform: "rotateY(" + (t + 180) + "deg)"})
-                } : function () {
-                    return i.toggleClass("is-real")
-                }, o = !1, $(window).load(function () {
-                    return after(3e3, function () {
-                        if (!o)return a("right")
-                    })
-                }), e = i.width() / 2, i.on("click touchdown", function (t) {
-                    var n;
-                    return o = !0, n = t.offsetX > e, a(n ? "right" : "left"), !1
-                }), window.history && history.pushState)return d = {}, u = function (t, n) {
-            return d[t] ? n(d[t]) : $.ajax({
-                url: "/" + t + ".content", dataType: "text", fail: function () {
-                    var n;
-                    return n = "ru" === t ? "/" : "/" + t
-                }, success: function (e) {
-                    return d[t] = e, n(d[t])
-                }
-            })
-        }, n = $("html").attr("lang"), d[n] = $(".content").html(), $(".lang").click(function () {
-            var t, e;
-            return e = $(this), t = e.attr("hreflang"), evil.queue(function (i) {
-                return n === t ? i() : (e.addClass("is-loading"), u(t, function (o) {
-                    var r, s;
-                    return $(".lang").removeClass("is-current"), e.addClass("is-current").removeClass("is-loading"), s = $(".content").addClass("is-animated"), r = $('<div class="content is-next is-hidden is-animated" />').html(o).insertAfter(s), document.title = r.find(".name").text(), after(1, function () {
-                        return s.addClass("is-hidden"), r.removeClass("is-hidden")
-                    }), after(601, function () {
-                        return r.removeClass("is-next is-animated"), s.remove(), n = t, i()
-                    }), history.pushState({}, "", e.attr("href"))
-                }))
-            }), !1
-        })
+  evil.queue = function (i, o) {
+    "function" == typeof i && (o = i, i = "default"), "undefined" == typeof n[i] && (t[i] = !1, n[i] = []), t[i] ? n[i].push(o) : e(i, o)
+  }
+  var t = {}, n = {}, e = function (i, o) {
+    t[i] = !0, o(function () {
+      t[i] = !1
+      var o = n[i].pop()
+      o && e(i, o)
     })
-}.call(this);</script>
+  }
+}(), function () {
+  $(function () {
+    var t, n, e, i, o, r, s, a, u, d
+    if (t = -180, i = $(".images"), s = $(".photo"), r = $(".mask"), a = evil.body.hasClass("transform-3d") ? function (n) {
+      return t += "left" === n ? -180 : 180, s.css({transform: "rotateY(" + t + "deg)"}), r.css({transform: "rotateY(" + (t + 180) + "deg)"})
+    } : function () {
+      return i.toggleClass("is-real")
+    }, o = !1, $(window).load(function () {
+      return after(3e3, function () {
+        if (!o) return a("right")
+      })
+    }), e = i.width() / 2, i.on("click touchdown", function (t) {
+      var n
+      return o = !0, n = t.offsetX > e, a(n ? "right" : "left"), !1
+    }), window.history && history.pushState) return d = {}, u = function (t, n) {
+      return d[t] ? n(d[t]) : $.ajax({
+        url: "/" + t + ".content", dataType: "text", fail: function () {
+          var n
+          return n = "ru" === t ? "/" : "/" + t
+        }, success: function (e) {
+          return d[t] = e, n(d[t])
+        }
+      })
+    }, n = $("html").attr("lang"), d[n] = $(".content").html(), $(".lang").click(function () {
+      var t, e
+      return e = $(this), t = e.attr("hreflang"), evil.queue(function (i) {
+        return n === t ? i() : (e.addClass("is-loading"), u(t, function (o) {
+          var r, s
+          return $(".lang").removeClass("is-current"), e.addClass("is-current").removeClass("is-loading"), s = $(".content").addClass("is-animated"), r = $('<div class="content is-next is-hidden is-animated" />').html(o).insertAfter(s), document.title = r.find(".name").text(), after(1, function () {
+            return s.addClass("is-hidden"), r.removeClass("is-hidden")
+          }), after(601, function () {
+            return r.removeClass("is-next is-animated"), s.remove(), n = t, i()
+          }), history.pushState({}, "", e.attr("href"))
+        }))
+      }), !1
+    })
+  })
+}.call(this)</script>
 
-<script id="wappalyzer" src="chrome-extension://gppongmhjkpfnbhagpmjfkannfbllamg/js/inject.js"></script></body></html>
+<script id="wappalyzer" src="chrome-extension://gppongmhjkpfnbhagpmjfkannfbllamg/js/inject.js"></script>
+</body>
+</html>
